@@ -19,9 +19,21 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-
-print_r($data);
+/*if($data == false){
+    echo 'No todos for you';
+}else {
+    print utility\htmlTable::genarateTableFromMultiArray($data);
+}*/
 ?>
+
+<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+    Owner email: <input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>"><br>
+    Created date: <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"><br>
+    Due date: <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"><br>
+    Message: <input type="text" name="message" value="<?php echo $data->message; ?>"><br>
+    Is done ?: <input type="text" name="isdone" value="<?php echo $data->isdone; ?>"><br>
+    <input type="submit" value="Submit form">
+</form>
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
