@@ -12,13 +12,15 @@ class todos extends database\collection
         $tableName = get_called_class();
         $sql = 'SELECT * FROM ' . $tableName . ' WHERE ownerid = ?';
 
-
         //grab the only record for find one and return as an object
         $recordsSet = self::getResults($sql, $userid);
 
         if (is_null($recordsSet)) {
             return FALSE;
         } else {
+            foreach ($recordsSet as $record){
+                unset($record->ownerid);
+            }
             return $recordsSet;
         }
     }
