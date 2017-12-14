@@ -105,6 +105,42 @@ class routes
         $route->method = 'delete';
         $routes[] = $route;
 
+        //@Trupti Patel to edit task : index.php?page=tasks&action=save&id
+//for create
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'create';
+        $routes[] = $route;
+//for edit form
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'form';
+        $routes[] = $route;
+
+        //new edit save
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'save';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'save';
+        $routes[] = $route;
+
+//logout
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'logout';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'logout';
+        $routes[] = $route;
+//end
 
         $route = new route();
         $route->http_method = 'POST';
