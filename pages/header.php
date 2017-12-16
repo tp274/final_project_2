@@ -14,8 +14,7 @@
       <!-- Custom styles for this template -->
       <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
-  </head>
-</html>
+<body>
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
