@@ -9,11 +9,4 @@ if($data == false){
 }
 
 ?>
-<html>
-<body>
-<form action="index.php?page=tasks&action=create" method="post" id="form1">
-    <button type="submit" form="form1" value="create">Create Task</button>
-</form>
-<!--<h1><a href="index.php?page=tasks&action=create">create task</a></h1> -->
-</body>
-</html>
+<h1><a type=button href="index.php?page=tasks&action=create">create task</a></h1>
