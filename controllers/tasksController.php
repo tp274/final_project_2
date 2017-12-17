@@ -55,7 +55,6 @@ class tasksController extends http\controller
 
         $todo = new todo();
         session_start();
-        date_default_timezone_set("Asia/Bangkok");
         $todo->ownerid = $_SESSION['userID'];
         $todo->isdone =$_POST['isdone'];
         $todo->message = $_REQUEST['message'];

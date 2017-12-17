@@ -16,7 +16,7 @@ include 'header.php';
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Due Date</label>
-                                <input type="text" name="duedate" placeholder="Due date.."value="<?php echo htmlspecialchars($data->duedate); ?>"class="form-password form-control" id="duedate" required>
+                                <input type="date" name="duedate" placeholder="Due date.."value="<?php echo explode(' ',$data->duedate)[0]; ?>"class="form-password form-control" id="duedate" required>
                             </div>
                            <div class="form-group" align="left">
                                Is done?
@@ -25,7 +25,7 @@ include 'header.php';
                            </div>
                            <div class="form-group">
                           <label class="sr-only" for="form-username">Message:</label>
-                               <textarea type="text" value="<?php echo $data->message; ?>" name="message" placeholder="Message.." class="form-username form-control" id="message" required></textarea>
+                               <textarea type="text"  name="message" placeholder="Message.." class="form-username form-control" id="message" required><?php echo htmlspecialchars($data->message,ENT_QUOTES,'UTF-8'); ?></textarea>
                           </div>
 
                             <button type="submit" class="btn">Update</button>
