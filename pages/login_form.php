@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <label class="sr-only" for="form-email">Gender</label>
                         Gender:
-                      <label>  <input type="radio" name="gender" value="male" > Male </label>
+                      <label>  <input type="radio" name="gender" value="male"  required> Male </label>
                      <label>  <input type="radio" name="gender" value="female" > Female </label>
                     </div>
                     <div class="form-group">

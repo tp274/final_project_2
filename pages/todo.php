@@ -18,7 +18,7 @@ include 'header.php';
                                 <div class="form-group" align="left">
                                     Is done?
                                  <label>   <input type="radio" name="isdone" value="1" > Yes </label>
-                                <label>  <input type="radio" name="isdone" value="0"  checked="checked"> No </label>
+                                <label>  <input type="radio" name="isdone" value="0" required checked="checked"> No </label>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-username">Due date:</label>
