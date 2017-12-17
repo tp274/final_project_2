@@ -38,6 +38,7 @@ class tasksController extends http\controller
             } else {
 
                 echo 'you must be logged in to view tasks';
+             header("Location: index.php");
             }
          $userID = $_SESSION['userID'];
          $records = todos::findTasksbyID($userID);
@@ -51,6 +52,7 @@ class tasksController extends http\controller
 
     public static function create()
     {
+
         $todo = new todo();
         session_start();
         date_default_timezone_set("Asia/Bangkok");
@@ -80,11 +82,13 @@ class tasksController extends http\controller
 
     // To save data
     public static function save() {
+
         $todo = todos::findOne($_REQUEST['id']);
         $todo->isdone =$_POST['isdone'];
         $todo->message = $_REQUEST['message'];
         $todo->duedate = $_POST['duedate'];
         $todo->owneremail =$_POST['owneremail'];
+
         $todo->save();
         header("Location: index.php?page=tasks&action=all");
     }

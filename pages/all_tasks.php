@@ -3,7 +3,7 @@ include 'header.php';
 //this is how you print something
 
 if($data == false){
-    echo '<p> You have no tasks </p>';
+    echo '<p> You have no tasks. </p>';
 }else{
     print utility\htmlTable::genarateTableFromMultiArray($data);
 }

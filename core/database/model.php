@@ -14,7 +14,7 @@ abstract class model
             exit;
         }
 
-
+        $INSERT = false;
         if ($this->id != '') {
             $sql = $this->update();
         } else {
