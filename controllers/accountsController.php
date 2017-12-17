@@ -126,7 +126,7 @@ class accountsController extends http\controller
         $user = accounts::findUserbyEmail($_REQUEST['email']);
 
         if ($user == FALSE) {
-            $_SESSION["flashMessage"] = "User doesnot exist";
+            $_SESSION["flashMessage"] = "User does not exist";
             header("Location: index.php");
         } else {
             if($user->checkPassword($_POST['password']) == TRUE) {
