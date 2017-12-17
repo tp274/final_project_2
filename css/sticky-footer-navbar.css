@@ -36,3 +36,11 @@ body > .container {
 code {
     font-size: 80%;
 }
+
+.container a, .container a:link, .container a:visited {
+    color: #FA6900;
+}
+.container a:hover, .container a:active {
+    color: #F38630;
+    text-decoration: underline;
+}
