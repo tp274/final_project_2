@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-<div class="card">
+<div class="card bg-light">
     <div class="card-header">
         <h4>Update Your Account</h4>
     </div>

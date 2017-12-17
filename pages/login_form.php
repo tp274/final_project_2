@@ -12,7 +12,7 @@
             <?php endif?>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="card">
+                    <div class="card  bg-light">
                         <div class="card-header">
                                 <h4>Login </h4>
                         </div>
@@ -36,7 +36,7 @@
 
     <div class="col-sm-6">
 
-        <div class="card">
+        <div class="card bg-light">
             <div class="card-header">
                 <div class="form-top-left">
                     <h4>New here? Join now</h4>

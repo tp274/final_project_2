@@ -19,7 +19,7 @@
 
       <div class="page-header" align="center">
           <h1>NJIT Task Management</h1>
-          <p>Manage your tasks with simple clicks.</p>
+          <p style="color :#160F29">Manage your tasks with simple clicks.</p>
       </div>
 
 

@@ -9,6 +9,16 @@ body {
     margin-bottom: 60px;
     color : #160F29;
 }
+h1 {
+    color :#F38630;
+    font-weight: 200;
+}
+h4{
+    color :#FA6900;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -25,7 +35,7 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-    padding: 60px 15px 0;
+    padding: 30px 15px 0;
 }
 
 .footer > .container {
