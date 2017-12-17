@@ -69,14 +69,16 @@ class accountsController extends http\controller
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
+
+            $_SESSION["flashMessage"] = "You have registered successfully.Please Login";
             header("Location: index.php");
 
         } else {
             //You can make a template for errors called error.php
             // and load the template here with the error you want to show.
            // echo 'already registered';
-            $error = 'Already registered';
-            self::getTemplate('error', $error);
+            $_SESSION["flashMessage"] = "Account Already exist. Please Login";
+            header("Location: index.php");
 
         }
 

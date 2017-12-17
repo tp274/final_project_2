@@ -1,4 +1,15 @@
         <div class="container">
+           <?php if(isset($_SESSION['flashMessage'])): ?>
+            <div class ="row">
+                <div class="col-sm-6">
+                    <div class="alert alert-info">
+                        <?php echo $_SESSION['flashMessage'] ;
+                        unset($_SESSION["flashMessage"]);
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif?>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
