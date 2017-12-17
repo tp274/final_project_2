@@ -10,3 +10,6 @@ if($data == false){
 
 ?>
 <h1><a type=button href="index.php?page=tasks&action=create">create task</a></h1>
+<?php
+include 'footer.php';
+?>

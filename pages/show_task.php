@@ -1,46 +1,51 @@
-<!doctype html>
+<?php
+include 'header.php';
+?>
+<div class="top-content">
 
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+<div class="inner-bg" >
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-5">
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+                <div class="form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Edit Your task </h3>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                       <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post" class="login-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-username">Owner Email</label>
+                                <input type="text" value="<?php echo $data->owneremail; ?>" name="owneremail" placeholder="Owner email.." class="form-username form-control" id="owneremail">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-password">Due Date</label>
+                                <input type="text" name="duedate" placeholder="Due date.."value="<?php echo htmlspecialchars($data->duedate); ?>"class="form-password form-control" id="duedate">
+                            </div>
+                           <div class="form-group" align="left">
+                               Is done ?
+                           <input type="radio" name="isdone" value="1" <?php echo ($data->isdone == '1') ? 'checked="checked"' : ''; ?>  />Yes
+                           <input type="radio" name="isdone" value="0" <?php echo ($data->isdone == '0') ? 'checked="checked"' : ''; ?> />No
+                           </div>
+                           <div>
+                          <label class="sr-only" for="form-username">Message:</label>
+                            <input type="text" value="<?php echo $data->message; ?>" name="message" placeholder="Message.." class="form-username form-control" id="message" required>
+                          </div>
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+                            <button type="submit" class="btn">Update</button>
+                        </form>
+                    </div>
+                </div>
 
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
-</head>
 
-<body>
+</div>
+            </div>
 
 <?php
-//this is how you print something  $data contains the record that was selected on the table.
-/*if($data == false){
-    echo 'No todos for you';
-}else {
-    print utility\htmlTable::genarateTableFromMultiArray($data);
-}*/
+include 'footer.php';
 ?>
-
-<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
-    Owner email: <input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>"><br>
-    Created date: <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"><br>
-    Due date: <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"><br>
-    Message: <input type="text" name="message" value="<?php echo $data->message; ?>"><br>
-    Is done ?: <input type="text" name="isdone" value="<?php echo $data->isdone; ?>"><br>
-    <input type="submit" value="Submit form">
-</form>
-<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form>
-
-
-
-
-<script src="js/scripts.js"></script>
-</body>
-</html>
