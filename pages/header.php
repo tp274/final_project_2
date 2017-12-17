@@ -9,17 +9,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-      <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
 
       <!-- Custom styles for this template -->
       <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
+  <body style="background: #ffa780">
   <div class="container">
-      <div class="jumbotron">
-         <center> <h1>NJIT Task Management</h1>
-          <p>Manage your tasks with simple clicks.</p></center>
+
+      <div class="page-header" align="center">
+          <h1>NJIT Task Management</h1>
+          <p>Manage your tasks with simple clicks.</p>
       </div>
-<body background="#1c7988e8">
+
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
