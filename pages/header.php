@@ -23,9 +23,6 @@
       </div>
 
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 if(key_exists('userID',$_SESSION)) {
     //$userID = $_SESSION['userID'];
     include 'authenticated_user_menu.php';

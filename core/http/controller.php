@@ -15,4 +15,9 @@ class controller
         include $template;
 
     }
+    public static function initialize(){
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+    }
 }

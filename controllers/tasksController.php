@@ -32,7 +32,6 @@ class tasksController extends http\controller
 
      public static function all()
      {
-        session_start();
          if(key_exists('userID',$_SESSION)) {
                 $userID = $_SESSION['userID'];
             } else {
@@ -54,7 +53,6 @@ class tasksController extends http\controller
     {
 
         $todo = new todo();
-        session_start();
         $todo->ownerid = $_SESSION['userID'];
         $todo->isdone =$_POST['isdone'];
         $todo->message = $_REQUEST['message'];

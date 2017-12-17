@@ -11,11 +11,12 @@
 class accountsController extends http\controller
 {
 
+
     //each method in the controller is named an action.
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        session_start();
+
         $record = accounts::findOne(($_SESSION["userID"]));
         self::getTemplate('show_account', $record);
     }
@@ -125,32 +126,20 @@ class accountsController extends http\controller
         if ($user == FALSE) {
             echo 'user not found';
         } else {
-           // var_dump($user->checkPassword($_POST['password']));
             if($user->checkPassword($_POST['password']) == TRUE) {
 
-
-                echo 'login';
-
-                session_start();
                 $_SESSION["userID"] = $user->id;
-
-                //forward the user to the show all todos page
-               // print_r($_SESSION);
                 header("Location: index.php?page=tasks&action=all");
             } else {
                 echo 'password does not match';
             }
 
         }
-
-
-
-
     }
 
     public static function logout(){
-        session_start();
         unset($_SESSION["userID"]);
+        session_destroy();
         header("Location: index.php");
     }
 
