@@ -19,7 +19,7 @@
                             <form role="form" action="index.php?page=accounts&action=login" method="POST" class="login-form">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-username">Email</label>
-                                    <input type="text" name="email" placeholder="email..." class="form-username form-control" id="form-username">
+                                    <input type="email" name="email" placeholder="email..." class="form-username form-control" id="form-username">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="form-email">Email</label>
-                        <input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">
+                        <input type="email" name="email" placeholder="Email..." class="form-email form-control" id="form-email">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="form-email">Birthday</label>

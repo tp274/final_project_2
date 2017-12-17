@@ -13,7 +13,7 @@ include 'header.php';
                             <form action="index.php?page=tasks&action=create" method="post" class="login-form">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-username">Owner Email</label>
-                                    <input type="text" name="owneremail" placeholder="Owner email.." class="form-owneremail form-control" id="owneremail" required>
+                                    <input type="email" name="owneremail" placeholder="Owner email.." class="form-owneremail form-control" id="owneremail" required>
                                 </div>
                                 <div class="form-group" align="left">
                                     Is done?
