@@ -15,7 +15,8 @@ class accountsController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        $record = accounts::findOne($_REQUEST['id']);
+        session_start();
+        $record = accounts::findOne(($_SESSION["userID"]));
         self::getTemplate('show_account', $record);
     }
 
@@ -40,6 +41,7 @@ class accountsController extends http\controller
         //USE THE ABOVE TO SEE HOW TO USE Bcrypt
         self::getTemplate('register');
     }
+
 
     //this is the function to save the user the new user for registration
     public static function store()
@@ -89,15 +91,15 @@ class accountsController extends http\controller
 //this is used to save the update form data
     public static function save() {
         $user = accounts::findOne($_REQUEST['id']);
-
         $user->email = $_POST['email'];
         $user->fname = $_POST['fname'];
         $user->lname = $_POST['lname'];
         $user->phone = $_POST['phone'];
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
+        unset($user->password);
         $user->save();
-        header("Location: index.php");
+        header("Location: index.php?page=tasks&action=all");
 
     }
 

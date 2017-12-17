@@ -14,7 +14,12 @@
       <!-- Custom styles for this template -->
       <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
-<body>
+  <div class="container">
+      <div class="jumbotron">
+         <center> <h1>NJIT Task Management</h1>
+          <p>Manage your tasks with simple clicks.</p></center>
+      </div>
+<body background="#1c7988e8">
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

@@ -39,6 +39,9 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="index.php?page=accounts&action=logout">Logout</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="index.php?page=accounts&action=update">Update Account Settings</a>
+            </li>
         </ul>
     </div>
 </body>
