@@ -70,7 +70,7 @@ class accountsController extends http\controller
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
 
-            $_SESSION["flashMessage"] = "You have registered successfully.Please Login";
+            $_SESSION["flashMessage"] = "You have registered successfully. You can login now.";
             header("Location: index.php");
 
         } else {
@@ -126,14 +126,16 @@ class accountsController extends http\controller
         $user = accounts::findUserbyEmail($_REQUEST['email']);
 
         if ($user == FALSE) {
-            echo 'user not found';
+            $_SESSION["flashMessage"] = "User doesnot exist";
+            header("Location: index.php");
         } else {
             if($user->checkPassword($_POST['password']) == TRUE) {
 
                 $_SESSION["userID"] = $user->id;
                 header("Location: index.php?page=tasks&action=all");
             } else {
-                echo 'password does not match';
+                $_SESSION["flashMessage"] = "Invalid credentials";
+                header("Location: index.php");
             }
 
         }

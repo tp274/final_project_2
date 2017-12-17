@@ -1,7 +1,7 @@
         <div class="container">
            <?php if(isset($_SESSION['flashMessage'])): ?>
             <div class ="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="alert alert-info">
                         <?php echo $_SESSION['flashMessage'] ;
                         unset($_SESSION["flashMessage"]);
