@@ -1,39 +1,26 @@
-<div class="top-content">
-
-    <div class="inner-bg">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
-
-                    <div class="form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Login </h3>
-                                <p>Enter username and password to log on:</p>
-                            </div>
-                            <div class="form-top-right">
-                                <i class="fa fa-lock"></i>
-                            </div>
+                    <div class="card">
+                        <div class="card-header">
+                                <h4>Login </h4>
                         </div>
-                        <div class="form-bottom">
+                        <p>Enter username and password to log on</p>
+                        <div class="card-body">
                             <form role="form" action="index.php?page=accounts&action=login" method="POST" class="login-form">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-username">Email</label>
-                                    <input type="email" name="email" placeholder="email..." class="form-username form-control" id="form-username">
+                                    <input type="email" name="email" placeholder="email..." class="form-username form-control" id="form-username" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
-                                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password" required>
                                 </div>
-                                <button type="submit" class="btn">Sign in</button>
+                                <button type="submit" class="btn btn-info">Sign in</button>
                             </form>
                         </div>
                     </div>
-
-
-
                 </div>
-
     <div class="col-sm-1 middle-border"></div>
     <div class="col-sm-1"></div>
 
@@ -88,11 +75,5 @@
 
     </div>
 </div>
-
-</div>
-</div>
-
-</div>
-
 
 </div>

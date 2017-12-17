@@ -29,7 +29,7 @@ include 'header.php';
                                     <textarea  name="message" placeholder="Message.." class="form-message form-control" id="message" required></textarea>
                                 </div>
 
-                                <button type="submit" class="btn">Submit</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </form>
                 </div>
             </div>

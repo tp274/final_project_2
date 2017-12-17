@@ -36,7 +36,7 @@ include 'header.php';
                                     <label>   <input type="radio"   placeholder="" name="gender" value="female" <?php echo ($data->gender == 'female') ? 'checked="checked"' : ''; ?> /> Female </label>
                                 </div>
 
-                        <button type="submit" class="btn">Update</button>
+                        <button type="submit" class="btn btn-info">Update</button>
                         </form>
                     </div>
                 </div>

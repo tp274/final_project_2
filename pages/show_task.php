@@ -28,7 +28,7 @@ include 'header.php';
                                <textarea type="text"  name="message" placeholder="Message.." class="form-username form-control" id="message" required><?php echo htmlspecialchars($data->message,ENT_QUOTES,'UTF-8'); ?></textarea>
                           </div>
 
-                            <button type="submit" class="btn">Update</button>
+                            <button type="submit" class="btn btn-info">Update</button>
                         </form>
                     </div>
                 </div>
