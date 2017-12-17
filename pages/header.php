@@ -22,9 +22,9 @@
           <p>Manage your tasks with simple clicks.</p>
       </div>
 
+
 <?php
 if(key_exists('userID',$_SESSION)) {
-    //$userID = $_SESSION['userID'];
     include 'authenticated_user_menu.php';
 } else {
 

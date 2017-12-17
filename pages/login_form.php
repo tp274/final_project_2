@@ -11,7 +11,7 @@
                             <form role="form" action="index.php?page=accounts&action=login" method="POST" class="login-form">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-username">Email</label>
-                                    <input type="email" name="email" placeholder="email..." class="form-username form-control" id="form-username" required autofocus>
+                                    <input type="email" name="email" placeholder="email..." class="form-email form-control" id="form-email" required autofocus>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
@@ -46,11 +46,11 @@
                         <input type="email" name="email" placeholder="Email..." class="form-email form-control" id="form-email" required>
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="form-email">Birthday</label>
+                        <label class="sr-only" for="form-birthday">Birthday</label>
                         <input type="date" name="birthday" placeholder="Birthday..." class="form-birthday form-control" id="form-birthday" required>
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="form-email">Phone number</label>
+                        <label class="sr-only" for="form-phonenumber">Phone number</label>
                         <input type="text" name="phone" placeholder="Phone number..." class="form-phonenumber form-control" id="form-phonenumber" required>
                     </div>
                     <div class="form-group">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="form-email">Password</label>
-                        <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-email" required>
+                        <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password" required>
                     </div>
 
                     <button type="submit" class="btn btn-success">Sign up</button>
