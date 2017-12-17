@@ -24,7 +24,9 @@
     Email: <input type="text" name="email"><br>
     Phone: <input type="text" name="phone"><br>
     Birthday: <input type="text" name="birthday"><br>
-    Gender: <input type="text" name="gender"><br>
+    Gender:
+    <input type="radio" name="gender" value="male" >Male
+    <input type="radio" name="gender" value="female" >Female<br>
     Password: <input type="password" name="password"><br>
     <input type="submit" value="Submit form">
 </form>
