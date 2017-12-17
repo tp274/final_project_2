@@ -11,7 +11,7 @@ if($data == false){
 ?>
 <div class ="card">
     <div class ="card-body">
-<h2><a  href="index.php?page=tasks&action=create">Create Task</a></h2>
+<h3><a  href="index.php?page=tasks&action=create">Create Task</a></h3>
     </div></div>
 <?php
 include 'footer.php';
