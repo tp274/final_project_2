@@ -14,7 +14,7 @@
       <!-- Custom styles for this template -->
       <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
-  <body style="background: #ffa780">
+  <body style="background: #E0E4CC">
   <div class="container">
 
       <div class="page-header" align="center">

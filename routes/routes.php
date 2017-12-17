@@ -98,7 +98,7 @@ class routes
         //YOU WILL NEED TO ADD MORE ROUTES
 
         $route = new route();
-        $route->http_method = 'POST';
+        $route->http_method = 'GET';
         $route->action = 'delete';
         $route->page = 'tasks';
         $route->controller = 'tasksController';
@@ -182,6 +182,13 @@ class routes
         $route->method = 'store';
         $routes[] = $route;
 
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'update';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'show';
+        $routes[] = $route;
 
         return $routes;
     }

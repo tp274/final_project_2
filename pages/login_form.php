@@ -42,7 +42,7 @@
         <div class="form-box">
             <div class="form-top">
                 <div class="form-top-left">
-                    <h3>New here ? Join us now</h3>
+                    <h3>New here? Join us now</h3>
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-pencil"></i>
